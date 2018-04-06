@@ -9,16 +9,16 @@ public class Blaster : MonoBehaviour {
     public Transform repr;
     public new Light light;
     [System.Serializable]
-    public class RotLink {
+    public struct RotLink {
         public enum axle {
             X,Y,Z
         }
         public Transform transform;
-        public float rotation = 0;
-        public float begin = 0;
-        public float target = 0;
-        public float lastBegin = 0;
-        public axle ax = axle.X;
+        public float rotation;
+        public float begin;
+        public float target;
+        public float lastBegin;
+        public axle ax;
     }
     public RotLink[] links;
     public AnimationCurve curve;
@@ -62,7 +62,7 @@ public class Blaster : MonoBehaviour {
             links[i].rotation = Mathf.Lerp(links[i].begin, links[i].target, curve.Evaluate(links[i].lastBegin));
 
             Quaternion q = Quaternion.identity;
-            if (links[i] != null) {
+            if (links.Length>=i) {
                 switch (links[i].ax) {
                     case RotLink.axle.X: q= Quaternion.Euler(links[i].rotation,0 , 0);break;
                     case RotLink.axle.Y: q = Quaternion.Euler(0, links[i].rotation, 0); break;
@@ -72,14 +72,10 @@ public class Blaster : MonoBehaviour {
             }
         }
         if (Input.GetKeyDown(KeyCode.Space)) {
-            try {
-                float[] f = new float[2];
-                f[0] = links[0].rotation + 45;
-                f[1] = 45 - links[1].rotation;
+            if (links.Length > 0) {
+                float[] f = { links[0].rotation + 45, 45 - links[1].rotation };
+
                 Rotate(f);
-            }
-            catch(System.Exception e){
-                Debug.LogWarning(e.ToString());
             }
         }
         if (Input.GetKeyDown(KeyCode.M)) {
