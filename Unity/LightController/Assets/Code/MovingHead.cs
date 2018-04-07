@@ -16,7 +16,6 @@ public class MovingHead : Blaster {
         public float lastBegin;
         public axle ax;
         public bool wrap;
-        public float maxDegree;
     }
     public RotLink[] links;
     public AnimationCurve curve;
@@ -69,7 +68,7 @@ public class MovingHead : Blaster {
             if (links[i].wrap)
                 links[i].target = Mathf.Repeat(angles[i], 360);
             else
-                links[i].target = Mathf.Clamp(angles[i], -links[i].maxDegree/2, links[i].maxDegree / 2); //maximals
+                links[i].target = Mathf.Clamp(angles[i], -180, 180);
 
 
             links[i].lastBegin = 0f;
