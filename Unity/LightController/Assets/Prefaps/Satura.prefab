@@ -197,7 +197,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523216650055060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.664, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -10.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4985372530952642}
@@ -273,9 +273,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 15.4
-  m_SpotAngle: 34
+  m_Intensity: 10
+  m_Range: 50
+  m_SpotAngle: 20
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -313,6 +313,7 @@ MonoBehaviour:
   preset: {fileID: 11400000, guid: 674b302e3558b0849b70fffc55dabc01, type: 2}
   repr: {fileID: 4985372530952642}
   light: {fileID: 108704957531387218}
+  colorWeelPosition: 0
   links:
   - transform: {fileID: 4184951169559520}
     rotation: 0
@@ -321,6 +322,7 @@ MonoBehaviour:
     lastBegin: 0
     ax: 0
     wrap: 1
+    maxDegree: 270
   - transform: {fileID: 4474115639628338}
     rotation: 0
     begin: 0
@@ -328,6 +330,7 @@ MonoBehaviour:
     lastBegin: 0
     ax: 1
     wrap: 0
+    maxDegree: 270
   curve:
     serializedVersion: 2
     m_Curve:
