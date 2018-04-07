@@ -8,7 +8,8 @@ public class Blaster : MonoBehaviour {
 
     public Transform repr;
     public new Light light;
-    
+    [Range(0,1)]
+    public float colorWeelPosition = 0;
 
     public virtual void Start () {
         setLocal(preset);//copiere das Prefap auf die localen Variabeln
@@ -22,11 +23,11 @@ public class Blaster : MonoBehaviour {
         local = preset;
         if (local.shape != null)
             light.cookie = local.shape.texture;
-        light.color = local.colors.Evaluate(0f);
+        light.color = local.colors.Evaluate(colorWeelPosition);
     }
 
 
     public virtual void Update () {
-        
+        light.color = local.colors.Evaluate(colorWeelPosition);
     }
 }

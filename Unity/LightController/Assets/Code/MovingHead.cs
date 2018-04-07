@@ -54,24 +54,23 @@ public class MovingHead : Blaster {
                 Rotate(f);
             }
         }
-        if (TargetPlacer.instance && Input.GetMouseButton(0)) {
+        if (TargetPlacer.instance && (Input.GetMouseButtonDown(0))) {
             Look(TargetPlacer.instance.transform.position);
         }
 
     }
 
     public void Rotate(float[] angles) {
+        
         for (int i = 0; i < links.Length; i++) {
-            try {
-                if (links[i].wrap)
-                    links[i].target = Mathf.Repeat(angles[i], 360);
-                else
-                    links[i].target = Mathf.Clamp(angles[i], -180, 180);
-
-            }
-            catch { }
-
             links[i].begin = links[i].rotation;
+
+            if (links[i].wrap)
+                links[i].target = Mathf.Repeat(angles[i], 360);
+            else
+                links[i].target = Mathf.Clamp(angles[i], -180, 180);
+
+
             links[i].lastBegin = 0f;
         }
     }

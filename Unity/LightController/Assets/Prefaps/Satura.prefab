@@ -274,8 +274,8 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
+  m_Range: 15.4
+  m_SpotAngle: 34
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -334,8 +334,8 @@ MonoBehaviour:
     - serializedVersion: 2
       time: 0
       value: 0
-      inSlope: 1.6865366
-      outSlope: 1.6865366
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
       time: 1
