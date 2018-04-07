@@ -8,11 +8,11 @@ public class Blaster : MonoBehaviour {
 
     public Transform repr;
     public new Light light;
-    [Range(0,1)]
+    [Range(0,3)]
     public float colorWeelPosition = 0;
 
     public virtual void Start () {
-        setLocal(preset);//copiere das Prefap auf die localen Variabeln
+        setLocal(preset);//kopiere das Prefap auf die localen Variabeln
     }
 
     
