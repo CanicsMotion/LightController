@@ -7,6 +7,8 @@ public class TimeLine :MonoBehaviour {
     public List<Event> events;
     public List<Coroutine> startedEvents;
     public float currentTime = 0;
+    public bool loop = false;
+    public float loopAt = 10;
     public enum playState {
         stop,play,pause,reverse
     }
@@ -17,6 +19,12 @@ public class TimeLine :MonoBehaviour {
     }
 
     private void Update() {
+
+        if (loop && currentTime >= loopAt) {
+            currentTime = 0;
+            Play();
+        }
+
         if (Input.GetKeyDown(KeyCode.Space)) {
             if (currentState == playState.pause || currentState == playState.stop) Play();
             else if (currentState == playState.play) Pause();

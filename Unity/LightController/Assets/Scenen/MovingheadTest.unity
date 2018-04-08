@@ -238,6 +238,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114265701086562592, guid: e33158d143ac04f46968d0cee884cea9,
+        type: 2}
+      propertyPath: strobeSpeed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e33158d143ac04f46968d0cee884cea9, type: 2}
   m_IsPrefabParent: 0

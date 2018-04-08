@@ -20,8 +20,11 @@ public class Blaster : MonoBehaviour {
     public bool strobe = false;
     [Range(-20, 20)]
     public float rotationSpeed = 5;
-    [Range(0, 25)]
+    [Range(2, 25)]
     public float strobeSpeed = 5;
+    [Range(0, 100)]
+    public float lightIntensity = 80;
+
 
     public virtual void Start () {
         setLocal(preset);//kopiere das Prefap auf die localen Variabeln
@@ -40,11 +43,12 @@ public class Blaster : MonoBehaviour {
         colorWheelPosition = 0;
         goboWheelPosition = 0;
         zoom = 15;
-        rotation = false;
+        //rotation = false;
         shutter = false;
         strobe = false;
-        rotationSpeed = 5;
+        //rotationSpeed = 5;
         strobeSpeed = 5;
+        lightIntensity = 80;
 
     }
 
