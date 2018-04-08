@@ -63,7 +63,7 @@ public class MovingHead : Blaster {
 =======
         if (Input.GetKeyDown(KeyCode.Space)) {
             if (links.Length > 0) {
-                float[] f = { links[0].rotation + 90 + Random.Range(-20, 20), 45 - links[1].rotation + Random.Range(-20, 20) + 20 };
+                float[] f = { links[0].rotation + Random.Range(-100, 100), 45 - links[1].rotation + Random.Range(-50, 50) };
 
                 Rotate(f);
             }
