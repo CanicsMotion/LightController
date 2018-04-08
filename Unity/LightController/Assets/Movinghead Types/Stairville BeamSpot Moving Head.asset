@@ -9,32 +9,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0de653f02c89b754c936f594537ec605, type: 3}
-  m_Name: dev
+  m_Name: Stairville BeamSpot Moving Head
   m_EditorClassIdentifier: 
-  Name: Dev Blaster
-  ModelCode: D3V
-  mesh: {fileID: 0}
+  Name: Stairville BeamSpot Moving Head
+  ModelCode: BS-280 R10
+  mesh: {fileID: 4300000, guid: aac21a3c03f522a489ad1bde2989b3b5, type: 3}
   mode: 0
   colors:
     serializedVersion: 2
     key0: {r: 1, g: 1, b: 1, a: 1}
     key1: {r: 0, g: 1, b: 0.25517225, a: 1}
-    key2: {r: 1, g: 0, b: 0, a: 0}
-    key3: {r: 0.08275862, g: 0, b: 0.7058823, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
+    key2: {r: 0.11724138, g: 0, b: 1, a: 0}
+    key3: {r: 0.11724138, g: 0, b: 1, a: 0}
+    key4: {r: 1, g: 0, b: 0, a: 0}
+    key5: {r: 1, g: 0, b: 0, a: 0}
+    key6: {r: 1, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 15035
-    ctime1: 31226
-    ctime2: 47995
-    ctime3: 48766
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
+    ctime0: 16384
+    ctime1: 32768
+    ctime2: 42598
+    ctime3: 49151
+    ctime4: 65535
+    ctime5: 65535
+    ctime6: 62258
     ctime7: 0
     atime0: 0
-    atime1: 22166
+    atime1: 65535
     atime2: 0
     atime3: 0
     atime4: 0
@@ -42,6 +42,6 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 1
-    m_NumColorKeys: 4
+    m_NumColorKeys: 5
     m_NumAlphaKeys: 2
-  shape: {fileID: 0}
+  shape: {fileID: 21300000, guid: a234b91ebe21c9040a47274ea466eb39, type: 3}

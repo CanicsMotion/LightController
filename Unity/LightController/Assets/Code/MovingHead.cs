@@ -7,7 +7,7 @@ public class MovingHead : Blaster {
     [System.Serializable]
     public struct RotLink {
         public enum axle {
-            X, Y, Z
+            Pan, Tilt, Z
         }
         public Transform transform;
         public float rotation;
@@ -41,8 +41,8 @@ public class MovingHead : Blaster {
             Quaternion q = Quaternion.identity;
             if (links.Length >= i) {
                 switch (links[i].ax) {
-                    case RotLink.axle.X: q = Quaternion.Euler(links[i].rotation, 0, 0); break;
-                    case RotLink.axle.Y: q = Quaternion.Euler(0, links[i].rotation, 0); break;
+                    case RotLink.axle.Pan: q = Quaternion.Euler(links[i].rotation, 0, 0); break;
+                    case RotLink.axle.Tilt: q = Quaternion.Euler(0, links[i].rotation, 0); break;
                     case RotLink.axle.Z: q = Quaternion.Euler(0, 0, links[i].rotation); break;
                 }
                 links[i].transform.localRotation = q;
