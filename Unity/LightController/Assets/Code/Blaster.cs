@@ -13,10 +13,15 @@ public class Blaster : MonoBehaviour {
     public int colorWheelPosition = 0;
     [Range(0, 16)]
     public int goboWheelPosition = 0;
-    public bool rotation = true;
+    [Range(5, 30)]
+    public int zoom = 15;
+    public bool rotation = false;
     public bool shutter = false;
-    [Range(0, 5)]
-    public float rotationSpeed = 0f;
+    public bool strobe = false;
+    [Range(-20, 20)]
+    public float rotationSpeed = 5;
+    [Range(0, 25)]
+    public float strobeSpeed = 5;
 
     public virtual void Start () {
         setLocal(preset);//kopiere das Prefap auf die localen Variabeln
@@ -28,28 +33,26 @@ public class Blaster : MonoBehaviour {
 
     void setLocal(BlasterObject obj) {
         local = preset;
-
-        if (local.gobos.Length != 0 && local.gobos[goboWheelPosition] != null)
-                light.cookie = local.gobos[goboWheelPosition].texture;     //set Shape(Gobo)
-            else
-                light.cookie = null;
-        if (shutter == false) {
-            if (local.colors.Length != 0 && local.colors[colorWheelPosition] != null) {
-                light.color = local.colors[colorWheelPosition];        //set Color(Beam)
-                lightbulb.color = local.colors[colorWheelPosition];    //set Colror(Lightbulb)
-            }else {
-                light.color = Color.white;
-                lightbulb.color = Color.white;
-            }
-        }
-        else {
-            light.color = Color.black;
-            lightbulb.color = Color.black;
-        }
     }
 
 
     public virtual void Update () {
+
+        if (rotation)
+        {
+            light.transform.Rotate(new Vector3(0, 0, rotationSpeed * -20 * Time.deltaTime));
+        }
+
+        light.spotAngle = zoom;
+
+        if(strobe == true){
+            light.enabled = lightbulb.enabled = Random.Range(0, 100) < strobeSpeed * 2;
+        }
+        else {
+            light.enabled = lightbulb.enabled = true;
+        }
+
+
         if (goboWheelPosition > local.gobos.Length-1)
             goboWheelPosition = local.gobos.Length-1;
 
@@ -74,10 +77,8 @@ public class Blaster : MonoBehaviour {
                 lightbulb.color = Color.white;
             }
         }
-        else
-        {
-            light.color = Color.black;
-            lightbulb.color = Color.black;
+        else{
+            light.color = lightbulb.color = Color.black;
         }
     }
 }

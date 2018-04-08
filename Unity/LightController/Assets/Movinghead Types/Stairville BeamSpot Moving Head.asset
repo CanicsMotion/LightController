@@ -23,7 +23,6 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 0, a: 0}
   - {r: 0, g: 1, b: 1, a: 0}
   - {r: 1, g: 0, b: 1, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
   gobos:
   - {fileID: 0}
   - {fileID: 21300000, guid: a234b91ebe21c9040a47274ea466eb39, type: 3}

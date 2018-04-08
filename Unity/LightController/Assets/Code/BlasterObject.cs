@@ -9,6 +9,7 @@ public enum blasterMode{
     Beam,
     SpotBeam,
     WashZoom,
+    Profiler,
 
 }
 

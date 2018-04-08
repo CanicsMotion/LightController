@@ -24,7 +24,10 @@ public class MovingHead : Blaster {
     // Use this for initialization
     public override void Start () {
         base.Start();
-	}
+        float[] f = { 0, -75, 0};
+
+        Rotate(f);
+    }
 
     // Update is called once per frame
     public override void Update () {
