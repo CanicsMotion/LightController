@@ -94,7 +94,8 @@ public class MovingHead : Blaster {
         Rotate(f);
     }
 
-    public void Reset() {
+    public override void Reset() {
+        base.Reset();
         float[] resetPos = { 0, -75, 0 };
         Rotate(resetPos);
     }

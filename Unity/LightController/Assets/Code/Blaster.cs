@@ -36,7 +36,7 @@ public class Blaster : MonoBehaviour {
         local = preset;
     }
 
-    public void Reset() {
+    public virtual void Reset() {
         colorWheelPosition = 0;
         goboWheelPosition = 0;
         zoom = 15;
