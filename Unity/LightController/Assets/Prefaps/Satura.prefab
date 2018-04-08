@@ -157,7 +157,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1690805236280318}
-  m_LocalRotation: {x: 0, y: 0, z: 0.3513622, w: 0.9362396}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -183,7 +183,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1437728478580696}
-  m_LocalRotation: {x: 0.29295918, y: 0, z: 0, w: -0.95612496}
+  m_LocalRotation: {x: -0.000000023849761, y: 0, z: 0, w: -1}
   m_LocalPosition: {x: -0.050169468, y: 0.00000000378769, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -227,7 +227,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523216650055060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -8.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4985372530952642}
@@ -241,7 +241,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786163877094304}
-  m_LocalRotation: {x: 0, y: -0.5131082, z: 0, w: 0.858324}
+  m_LocalRotation: {x: 0, y: -0.6087614, z: 0, w: 0.7933533}
   m_LocalPosition: {x: -0.34739488, y: 0.000000026227585, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -305,7 +305,7 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Intensity: 10
   m_Range: 50
-  m_SpotAngle: 30
+  m_SpotAngle: 15
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -315,7 +315,7 @@ Light:
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
-  m_Cookie: {fileID: 2800000, guid: 8050bdb919db27f459b8be66a9005228, type: 3}
+  m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -382,24 +382,25 @@ MonoBehaviour:
   lightbulb: {fileID: 108916096068871828}
   colorWheelPosition: 0
   goboWheelPosition: 0
-  zoom: 30
-  rotation: 1
-  shutter: 0
+  zoom: 15
+  rotation: 0
+  shutter: 1
   strobe: 0
-  rotationSpeed: 5
+  rotationSpeed: 0
+  strobeSpeed: 5
   links:
   - transform: {fileID: 4184951169559520}
-    rotation: 1045.9296
+    rotation: 1080
     begin: 1045.9296
-    target: 325.92953
+    target: 0
     lastBegin: 1
     ax: 0
     wrap: 1
     maxDegree: 540
   - transform: {fileID: 4474115639628338}
-    rotation: -61.742172
-    begin: -67.423164
-    target: -61.742172
+    rotation: -75
+    begin: -61.742172
+    target: -75
     lastBegin: 1
     ax: 1
     wrap: 0

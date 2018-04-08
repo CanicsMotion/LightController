@@ -6,9 +6,10 @@ public class MovingHead : Blaster {
 
     [System.Serializable]
     public struct RotLink {
-        public enum axle {
+        public enum axle{
             Pan, Tilt, Z
         }
+
         public Transform transform;
         public float rotation;
         public float begin;
@@ -24,9 +25,9 @@ public class MovingHead : Blaster {
     // Use this for initialization
     public override void Start () {
         base.Start();
-        float[] f = { 0, -75, 0};
 
-        Rotate(f);
+        Reset();
+
     }
 
     // Update is called once per frame
@@ -58,6 +59,11 @@ public class MovingHead : Blaster {
                 Rotate(f);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.R))
+            Reset();
+
+
         if (TargetPlacer.instance && (Input.GetMouseButtonDown(0))) {
             Look(TargetPlacer.instance.transform.position);
         }
@@ -85,5 +91,10 @@ public class MovingHead : Blaster {
         float y = Vector2.SignedAngle(Vector2.up, new Vector2(new Vector2(off.x, off.z).magnitude, off.y));
         float[] f = { x, y, 0 };
         Rotate(f);
+    }
+
+    public void Reset() {
+        float[] resetPos = { 0, -75, 0 };
+        Rotate(resetPos);
     }
 }

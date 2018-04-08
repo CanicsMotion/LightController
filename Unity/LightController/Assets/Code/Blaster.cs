@@ -25,6 +25,7 @@ public class Blaster : MonoBehaviour {
 
     public virtual void Start () {
         setLocal(preset);//kopiere das Prefap auf die localen Variabeln
+        Reset();
     }
 
     
@@ -35,8 +36,23 @@ public class Blaster : MonoBehaviour {
         local = preset;
     }
 
+    public void Reset() {
+        colorWheelPosition = 0;
+        goboWheelPosition = 0;
+        zoom = 15;
+        rotation = false;
+        shutter = false;
+        strobe = false;
+        rotationSpeed = 5;
+        strobeSpeed = 5;
+
+    }
+
 
     public virtual void Update () {
+
+        if (Input.GetKeyDown(KeyCode.R))
+            Reset();
 
         if (rotation)
         {
