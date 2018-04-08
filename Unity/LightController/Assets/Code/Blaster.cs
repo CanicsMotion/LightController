@@ -8,6 +8,7 @@ public class Blaster : MonoBehaviour {
 
     public Transform repr;
     public new Light light;
+    public new Light lightbulb;
     [Range(0,1)]
     public float colorWeelPosition = 0;
 
@@ -29,5 +30,6 @@ public class Blaster : MonoBehaviour {
 
     public virtual void Update () {
         light.color = local.colors.Evaluate(colorWeelPosition);
+        lightbulb.color = local.colors.Evaluate(colorWeelPosition);
     }
 }
