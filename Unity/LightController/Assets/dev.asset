@@ -20,14 +20,14 @@ MonoBehaviour:
     key0: {r: 1, g: 1, b: 1, a: 1}
     key1: {r: 0, g: 1, b: 0.25517225, a: 1}
     key2: {r: 1, g: 0, b: 0, a: 0}
-    key3: {r: 0.11724138, g: 0, b: 1, a: 0}
+    key3: {r: 0.08275862, g: 0, b: 0.7058823, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 15035
     ctime1: 31226
-    ctime2: 48573
+    ctime2: 47995
     ctime3: 48766
     ctime4: 0
     ctime5: 0
@@ -44,4 +44,4 @@ MonoBehaviour:
     m_Mode: 1
     m_NumColorKeys: 4
     m_NumAlphaKeys: 2
-  shape: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  shape: {fileID: 0}
