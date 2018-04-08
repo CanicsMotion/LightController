@@ -14,6 +14,7 @@ public class Blaster : MonoBehaviour {
     [Range(0, 16)]
     public int goboWheelPosition = 0;
     public bool rotation = true;
+    public bool shutter = false;
     [Range(0, 5)]
     public float rotationSpeed = 0f;
 
@@ -28,17 +29,23 @@ public class Blaster : MonoBehaviour {
     void setLocal(BlasterObject obj) {
         local = preset;
 
-        if (local.gobos.Length != 0)
-            if (local.gobos[goboWheelPosition] != null)
+        if (local.gobos.Length != 0 && local.gobos[goboWheelPosition] != null)
                 light.cookie = local.gobos[goboWheelPosition].texture;     //set Shape(Gobo)
             else
                 light.cookie = null;
-        if (local.colors.Length != 0)
-            if (local.colors[colorWheelPosition] != null)
-            {
+        if (shutter == false) {
+            if (local.colors.Length != 0 && local.colors[colorWheelPosition] != null) {
                 light.color = local.colors[colorWheelPosition];        //set Color(Beam)
                 lightbulb.color = local.colors[colorWheelPosition];    //set Colror(Lightbulb)
+            }else {
+                light.color = Color.white;
+                lightbulb.color = Color.white;
             }
+        }
+        else {
+            light.color = Color.black;
+            lightbulb.color = Color.black;
+        }
     }
 
 
@@ -49,20 +56,28 @@ public class Blaster : MonoBehaviour {
         if (colorWheelPosition > local.colors.Length - 1)
             colorWheelPosition = local.colors.Length - 1;
 
-        if (local.gobos.Length != 0)
-            if (local.gobos[goboWheelPosition] != null)
+        if (local.gobos.Length != 0 && local.gobos[goboWheelPosition] != null)
                 light.cookie = local.gobos[goboWheelPosition].texture;     //set Shape(Gobo)
             else
                 light.cookie = null;
 
-        if (local.colors.Length != 0)
-            if (local.colors[colorWheelPosition] != null){
+        if (shutter == false)
+        {
+            if (local.colors.Length != 0 && local.colors[colorWheelPosition] != null)
+            {
                 light.color = local.colors[colorWheelPosition];        //set Color(Beam)
                 lightbulb.color = local.colors[colorWheelPosition];    //set Colror(Lightbulb)
             }
-            else{
+            else
+            {
                 light.color = Color.white;
                 lightbulb.color = Color.white;
             }
+        }
+        else
+        {
+            light.color = Color.black;
+            lightbulb.color = Color.black;
+        }
     }
 }
