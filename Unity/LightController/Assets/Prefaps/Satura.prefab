@@ -183,7 +183,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1437728478580696}
-  m_LocalRotation: {x: 0.021748453, y: -0, z: -0, w: 0.9997635}
+  m_LocalRotation: {x: -0.000000023849761, y: 0, z: 0, w: -1}
   m_LocalPosition: {x: -0.050169468, y: 0.00000000378769, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -241,7 +241,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1786163877094304}
-  m_LocalRotation: {x: 0.0000001490116, y: -0.7187396, z: 0.000000052154057, w: 0.69527936}
+  m_LocalRotation: {x: 0, y: -0.6087614, z: 0, w: 0.7933533}
   m_LocalPosition: {x: -0.34739488, y: 0.000000026227585, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -302,14 +302,14 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Intensity: 10
   m_Range: 50
   m_SpotAngle: 15
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
+    m_Type: 2
+    m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -338,7 +338,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Intensity: 7
   m_Range: 0.1
   m_SpotAngle: 30
@@ -382,22 +382,26 @@ MonoBehaviour:
   lightbulb: {fileID: 108916096068871828}
   colorWheelPosition: 0
   goboWheelPosition: 0
-  rotation: 1
+  zoom: 15
+  rotation: 0
+  shutter: 1
+  strobe: 0
   rotationSpeed: 0
+  strobeSpeed: 5
   links:
   - transform: {fileID: 4184951169559520}
-    rotation: 0
-    begin: 0
+    rotation: 1080
+    begin: 1045.9296
     target: 0
-    lastBegin: 0
+    lastBegin: 1
     ax: 0
     wrap: 1
     maxDegree: 540
   - transform: {fileID: 4474115639628338}
-    rotation: 0
-    begin: 0
-    target: 0
-    lastBegin: 0
+    rotation: -75
+    begin: -61.742172
+    target: -75
+    lastBegin: 1
     ax: 1
     wrap: 0
     maxDegree: 270

@@ -6,9 +6,10 @@ public class MovingHead : Blaster {
 
     [System.Serializable]
     public struct RotLink {
-        public enum axle {
+        public enum axle{
             Pan, Tilt, Z
         }
+
         public Transform transform;
         public float rotation;
         public float begin;
@@ -24,7 +25,10 @@ public class MovingHead : Blaster {
     // Use this for initialization
     public override void Start () {
         base.Start();
-	}
+
+        Reset();
+
+    }
 
     // Update is called once per frame
     public override void Update () {
@@ -48,6 +52,7 @@ public class MovingHead : Blaster {
                 links[i].transform.localRotation = q;
             }
         }
+<<<<<<< HEAD
      //   if (Input.GetKeyDown(KeyCode.Space)) {
      //       if (links.Length > 0) {
      //           float[] f = { links[0].rotation + 90 + Random.Range(-20, 20), 45 - links[1].rotation + Random.Range(-20, 20) + 20 };
@@ -55,6 +60,20 @@ public class MovingHead : Blaster {
      //           Rotate(f);
      //       }
      //   }
+=======
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            if (links.Length > 0) {
+                float[] f = { links[0].rotation + 90 + Random.Range(-20, 20), 45 - links[1].rotation + Random.Range(-20, 20) + 20 };
+
+                Rotate(f);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+            Reset();
+
+
+>>>>>>> 540bcea6b6180853970a24aae78bdeb43cc5060f
         if (TargetPlacer.instance && (Input.GetMouseButtonDown(0))) {
             Look(TargetPlacer.instance.transform.position);
         }
@@ -82,5 +101,10 @@ public class MovingHead : Blaster {
         float y = Vector2.SignedAngle(Vector2.up, new Vector2(new Vector2(off.x, off.z).magnitude, off.y));
         float[] f = { x, y, 0 };
         Rotate(f);
+    }
+
+    public void Reset() {
+        float[] resetPos = { 0, -75, 0 };
+        Rotate(resetPos);
     }
 }
