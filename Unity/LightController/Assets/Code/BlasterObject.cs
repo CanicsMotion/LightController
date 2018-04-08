@@ -19,5 +19,5 @@ public class BlasterObject : ScriptableObject {
     public Mesh mesh = null;
     public blasterMode mode = blasterMode.Spot;
     public Gradient colors = new Gradient();
-    public Sprite shape = null;
+    public Sprite[] gobos = null;
 }

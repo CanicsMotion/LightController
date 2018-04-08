@@ -44,4 +44,9 @@ MonoBehaviour:
     m_Mode: 1
     m_NumColorKeys: 5
     m_NumAlphaKeys: 2
-  shape: {fileID: 21300000, guid: a234b91ebe21c9040a47274ea466eb39, type: 3}
+  gobos:
+  - {fileID: 0}
+  - {fileID: 21300000, guid: a234b91ebe21c9040a47274ea466eb39, type: 3}
+  - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 21300000, guid: f9c878cc7458e85439adc5ab02f01aad, type: 3}

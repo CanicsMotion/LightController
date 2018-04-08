@@ -10,7 +10,12 @@ public class Blaster : MonoBehaviour {
     public new Light light;
     public new Light lightbulb;
     [Range(0,1)]
-    public float colorWeelPosition = 0;
+    public float colorWheelPosition = 0;
+    [Range(0, 16)]
+    public int goboWheelPosition = 0;
+    public bool rotation = true;
+    [Range(0, 5)]
+    public float rotationSpeed = 0f;
 
     public virtual void Start () {
         setLocal(preset);//kopiere das Prefap auf die localen Variabeln
@@ -22,14 +27,29 @@ public class Blaster : MonoBehaviour {
 
     void setLocal(BlasterObject obj) {
         local = preset;
-        if (local.shape != null)
-            light.cookie = local.shape.texture;
-        light.color = local.colors.Evaluate(colorWeelPosition);
+
+        if (local.gobos.Length != 0)
+            if (local.gobos[goboWheelPosition] != null)
+                light.cookie = local.gobos[goboWheelPosition].texture;     //set Shape(Gobo)
+            else
+                light.cookie = null;
+
+        light.color = local.colors.Evaluate(colorWheelPosition);        //set Color(Beam)
+        lightbulb.color = local.colors.Evaluate(colorWheelPosition);    //set Colror(Lightbulb)
     }
 
 
     public virtual void Update () {
-        light.color = local.colors.Evaluate(colorWeelPosition);
-        lightbulb.color = local.colors.Evaluate(colorWeelPosition);
+        if (goboWheelPosition > local.gobos.Length-1)
+            goboWheelPosition = local.gobos.Length-1;
+
+        if (local.gobos.Length != 0)
+            if (local.gobos[goboWheelPosition] != null)
+                light.cookie = local.gobos[goboWheelPosition].texture;     //set Shape(Gobo)
+            else
+                light.cookie = null;
+
+        light.color = local.colors.Evaluate(colorWheelPosition);        //set Color(Beam)
+        lightbulb.color = local.colors.Evaluate(colorWheelPosition);    //set Colror(Lightbulb)
     }
 }

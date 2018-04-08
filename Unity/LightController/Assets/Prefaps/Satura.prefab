@@ -227,7 +227,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1523216650055060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -8.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4985372530952642}
@@ -376,11 +376,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6f56c4f7bdc7e4c85d971f61b67053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preset: {fileID: 11400000, guid: 674b302e3558b0849b70fffc55dabc01, type: 2}
+  preset: {fileID: 11400000, guid: 6e6276bd6512b2e4bb61f35e282f40fd, type: 2}
   repr: {fileID: 4985372530952642}
   light: {fileID: 108381971608647492}
   lightbulb: {fileID: 108916096068871828}
-  colorWeelPosition: 0
+  colorWheelPosition: 0
+  goboWheelPosition: 0
+  rotation: 1
+  rotationSpeed: 0
   links:
   - transform: {fileID: 4184951169559520}
     rotation: 0
@@ -389,7 +392,7 @@ MonoBehaviour:
     lastBegin: 0
     ax: 0
     wrap: 1
-    maxDegree: 270
+    maxDegree: 540
   - transform: {fileID: 4474115639628338}
     rotation: 0
     begin: 0
