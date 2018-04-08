@@ -48,13 +48,13 @@ public class MovingHead : Blaster {
                 links[i].transform.localRotation = q;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            if (links.Length > 0) {
-                float[] f = { links[0].rotation + 90 + Random.Range(-20, 20), 45 - links[1].rotation + Random.Range(-20, 20) + 20 };
-
-                Rotate(f);
-            }
-        }
+     //   if (Input.GetKeyDown(KeyCode.Space)) {
+     //       if (links.Length > 0) {
+     //           float[] f = { links[0].rotation + 90 + Random.Range(-20, 20), 45 - links[1].rotation + Random.Range(-20, 20) + 20 };
+     //
+     //           Rotate(f);
+     //       }
+     //   }
         if (TargetPlacer.instance && (Input.GetMouseButtonDown(0))) {
             Look(TargetPlacer.instance.transform.position);
         }
