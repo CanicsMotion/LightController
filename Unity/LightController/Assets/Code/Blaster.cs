@@ -9,8 +9,8 @@ public class Blaster : MonoBehaviour {
     public Transform repr;
     public new Light light;
     public new Light lightbulb;
-    [Range(0,1)]
-    public float colorWheelPosition = 0;
+    [Range(0, 16)]
+    public int colorWheelPosition = 0;
     [Range(0, 16)]
     public int goboWheelPosition = 0;
     public bool rotation = true;
@@ -33,9 +33,12 @@ public class Blaster : MonoBehaviour {
                 light.cookie = local.gobos[goboWheelPosition].texture;     //set Shape(Gobo)
             else
                 light.cookie = null;
-
-        light.color = local.colors.Evaluate(colorWheelPosition);        //set Color(Beam)
-        lightbulb.color = local.colors.Evaluate(colorWheelPosition);    //set Colror(Lightbulb)
+        if (local.colors.Length != 0)
+            if (local.colors[colorWheelPosition] != null)
+            {
+                light.color = local.colors[colorWheelPosition];        //set Color(Beam)
+                lightbulb.color = local.colors[colorWheelPosition];    //set Colror(Lightbulb)
+            }
     }
 
 
@@ -43,13 +46,23 @@ public class Blaster : MonoBehaviour {
         if (goboWheelPosition > local.gobos.Length-1)
             goboWheelPosition = local.gobos.Length-1;
 
+        if (colorWheelPosition > local.colors.Length - 1)
+            colorWheelPosition = local.colors.Length - 1;
+
         if (local.gobos.Length != 0)
             if (local.gobos[goboWheelPosition] != null)
                 light.cookie = local.gobos[goboWheelPosition].texture;     //set Shape(Gobo)
             else
                 light.cookie = null;
 
-        light.color = local.colors.Evaluate(colorWheelPosition);        //set Color(Beam)
-        lightbulb.color = local.colors.Evaluate(colorWheelPosition);    //set Colror(Lightbulb)
+        if (local.colors.Length != 0)
+            if (local.colors[colorWheelPosition] != null){
+                light.color = local.colors[colorWheelPosition];        //set Color(Beam)
+                lightbulb.color = local.colors[colorWheelPosition];    //set Colror(Lightbulb)
+            }
+            else{
+                light.color = Color.white;
+                lightbulb.color = Color.white;
+            }
     }
 }

@@ -16,37 +16,22 @@ MonoBehaviour:
   mesh: {fileID: 4300000, guid: aac21a3c03f522a489ad1bde2989b3b5, type: 3}
   mode: 0
   colors:
-    serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 0, g: 1, b: 0.25517225, a: 1}
-    key2: {r: 0.11724138, g: 0, b: 1, a: 0}
-    key3: {r: 0.11724138, g: 0, b: 1, a: 0}
-    key4: {r: 1, g: 0, b: 0, a: 0}
-    key5: {r: 1, g: 0, b: 0, a: 0}
-    key6: {r: 1, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 16384
-    ctime1: 32768
-    ctime2: 42598
-    ctime3: 49151
-    ctime4: 65535
-    ctime5: 65535
-    ctime6: 62258
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 1
-    m_NumColorKeys: 5
-    m_NumAlphaKeys: 2
+  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 0, g: 1, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 1, a: 0}
+  - {r: 1, g: 1, b: 0, a: 0}
+  - {r: 0, g: 1, b: 1, a: 0}
+  - {r: 1, g: 0, b: 1, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
   gobos:
   - {fileID: 0}
   - {fileID: 21300000, guid: a234b91ebe21c9040a47274ea466eb39, type: 3}
-  - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 10915, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 21300000, guid: f9c878cc7458e85439adc5ab02f01aad, type: 3}
+  - {fileID: 21300000, guid: d6ac3258edb89c9468be6bb67493660f, type: 3}
+  - {fileID: 21300000, guid: 9a45523eb2700294e8cac99fd83a7679, type: 3}
+  - {fileID: 21300000, guid: 8050bdb919db27f459b8be66a9005228, type: 3}
+  - {fileID: 21300000, guid: 1d78706aedbedf9468998e509e450d4b, type: 3}
+  - {fileID: 21300000, guid: f2ba122b2718129478a472b6d5cf7bef, type: 3}
+  - {fileID: 21300000, guid: aefc0a4ec7829824792c490f243a0360, type: 3}
+  - {fileID: 21300000, guid: 83963235c6b384e488f6bab1b4f42db5, type: 3}

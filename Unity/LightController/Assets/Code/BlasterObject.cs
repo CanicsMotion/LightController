@@ -18,6 +18,6 @@ public class BlasterObject : ScriptableObject {
     public string ModelCode = "M0D3L";
     public Mesh mesh = null;
     public blasterMode mode = blasterMode.Spot;
-    public Gradient colors = new Gradient();
+    public Color[] colors = { Color.white };
     public Sprite[] gobos = null;
 }
