@@ -20,7 +20,7 @@ public class Blaster : MonoBehaviour {
     public bool strobe = false;
     [Range(-20, 20)]
     public float rotationSpeed = 5;
-    [Range(2, 25)]
+    [Range(2, 50)]
     public float strobeSpeed = 5;
     [Range(0, 100)]
     public float lightIntensity = 80;
@@ -45,7 +45,7 @@ public class Blaster : MonoBehaviour {
         zoom = 15;
         //rotation = false;
         shutter = false;
-        strobe = false;
+        //strobe = false;
         //rotationSpeed = 5;
         strobeSpeed = 5;
         lightIntensity = 80;
