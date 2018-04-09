@@ -463,6 +463,11 @@ Prefab:
       propertyPath: rotation
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114265701086562592, guid: e33158d143ac04f46968d0cee884cea9,
+        type: 2}
+      propertyPath: rotationSpeed
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e33158d143ac04f46968d0cee884cea9, type: 2}
   m_IsPrefabParent: 0
@@ -657,6 +662,24 @@ MonoBehaviour:
     printMsg: Hallo Ich bins
     newColor: 4
     newGobo: 0
+  - targets:
+    - {fileID: 1153438134}
+    - {fileID: 223460395}
+    time: 5
+    type: 4
+    lookDir: {x: 4, y: 1.5, z: 3}
+    printMsg: Hallo Ich bins
+    newColor: 4
+    newGobo: 10
+  - targets:
+    - {fileID: 1153438134}
+    - {fileID: 223460395}
+    time: 5
+    type: 2
+    lookDir: {x: 4, y: 1.5, z: 3}
+    printMsg: Hallo Ich bins
+    newColor: 3
+    newGobo: 10
   currentTime: 0
   loop: 1
   loopAt: 9
@@ -832,6 +855,11 @@ Prefab:
         type: 2}
       propertyPath: rotation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114265701086562592, guid: e33158d143ac04f46968d0cee884cea9,
+        type: 2}
+      propertyPath: rotationSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e33158d143ac04f46968d0cee884cea9, type: 2}
