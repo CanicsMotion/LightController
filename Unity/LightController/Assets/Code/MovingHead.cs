@@ -88,6 +88,7 @@ public class MovingHead : Blaster {
 
     public void Look(Vector3 pos) {
         Vector3 off = pos - transform.position;
+        off = Quaternion.Inverse(transform.rotation) * off;
         float x = Vector2.SignedAngle(Vector2.up, new Vector2(off.x, off.z));
         float y = Vector2.SignedAngle(Vector2.up, new Vector2(new Vector2(off.x, off.z).magnitude, off.y));
         float[] f = { x, y, 0 };

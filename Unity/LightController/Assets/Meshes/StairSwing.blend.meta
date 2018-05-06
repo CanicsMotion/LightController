@@ -1,19 +1,23 @@
 fileFormatVersion: 2
 guid: dc40a59fec3a6d04a8bd527ac3968379
-timeCreated: 1525552363
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
     2100000: unnamed
+    2100002: DarkWood
     2300000: //RootNode
     3300000: //RootNode
     4300000: Cube_001
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkWood
+    second: {fileID: 2100000, guid: 0cd03024ee2cb6043a3f152476108337, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -37,6 +41,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
