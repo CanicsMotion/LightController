@@ -37,6 +37,17 @@ public struct Event  {
         }
         
     }
+
+
+    public Event(Blaster[] targets, float time, eventType type) {
+        this.targets = targets;
+        this.time = time;
+        this.type = type;
+        lookDir = Vector3.zero;
+        printMsg = "";
+        newColor = 0;
+        newGobo = 0;
+    }
 }
 
 public enum eventType {

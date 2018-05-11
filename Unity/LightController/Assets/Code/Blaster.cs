@@ -6,6 +6,8 @@ public class Blaster : MonoBehaviour {
     [SerializeField] BlasterObject preset;
     [System.NonSerialized] public BlasterObject local;
 
+    public static List<Blaster> all;
+
     public Transform repr;
     public new Light light;
     public new Light lightbulb;
@@ -25,11 +27,21 @@ public class Blaster : MonoBehaviour {
     [Range(0, 100)]
     public float lightIntensity = 80;
 
+    private void Awake() {
+        if (all == null) all = new List<Blaster>();
+        all.Add(this);
+    }
+
+    private void OnDestroy() {
+        all.Remove(this);
+    }
+
 
     public virtual void Start () {
         setLocal(preset);//kopiere das Prefap auf die localen Variabeln
         Reset();
     }
+
 
     
 
