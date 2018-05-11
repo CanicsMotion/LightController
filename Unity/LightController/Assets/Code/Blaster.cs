@@ -55,6 +55,9 @@ public class Blaster : MonoBehaviour {
 
     public virtual void Update () {
 
+        lightbulb.intensity = lightIntensity;
+        light.intensity = lightIntensity;
+
         if (Input.GetKeyDown(KeyCode.R))
             Reset();
 
